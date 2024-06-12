@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Giga:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700" rel="stylesheet" />
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+            width: 200%;
+            margin: 0 auto;
+            position: relative; /* Added relative positioning */
+        }
+
+        .contactus-1 {
+            flex: 1;
+        }
+
+        .contactus-1 .card {
+            background-color: white;
+            height: 100%;
+            width: 30svw;
+            border: 3px solid black;
+            padding: 30px;
+            box-shadow: 10px 10px 10px 10px #00000079;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 70vw;
+            margin: 0;
+            background-image: url(https://cdn4.vectorstock.com/i/1000x1000/34/93/web-page-background-vector-9333493.jpg);
+        }
+
+        .contactus-1 .text-input,
+        .contactus-1 .btt {
+            width: calc(100% - 22px);
+            display: block;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .form-title {
+            font-family:lexend giga;
+            font-size: larger;
+
+
+
+
+        }        .contactus-1 .btn {
+            height: 6vh;
+            background-color: blueviolet;
+            padding-left:20px;
+            padding-right:20px;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .contactus-1 .right-side-text {
+            border: 3px solid black;
+            box-shadow: 4px 10px 10px 10px #00000079;
+            position: absolute;
+            overflow: hidden;
+            height: 100%; /* Changed height to 100% */
+            width: 30lvw; /* Changed width to 100% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contactus-1 .right-side-text img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; /* Added object-fit for image */
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-display: bold;
+            font-family: dancing script;
+            font-size: 250%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="contactus-1">
+                <div class="card">
+                    <h3 class="form-title">Contact Information</h3>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" class="text-input" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" class="text-input" id="email" name="email" required>
+
+                    <label for="country-code">Country Code</label>
+                    <input type="tel" class="text-input" id="country-code" name="country-code" list="country-code-list" required>
+                    <datalist id="country-code-list">
+                        <option value="+91">+91(IND)</option>
+                        <option value="+1">+1(USA)</option>
+                        <option value="+44">+44(UK)</option>
+                        <option value="+81">+81(JPN)</option>
+                        <option value="+86">+86(CHN)</option>
+                    </datalist>
+
+                    <label for="contact-no">Contact No.</label>
+                    <input type="tel" class="btt" id="contact-no" name="contact-no" minlength="10" required>
+
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </div>
+
+            <div class="contactus-1">
+                <div class="right-side-text">
+                    <img src="https://i.pinimg.com/736x/14/08/ed/1408ed2e72961df5335c2391c3eacd41.jpg" alt="Image" class="bg-image">
+                    <div class="overlay-text">
+                        <p>Contact us for any queries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
